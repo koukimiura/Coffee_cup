@@ -1,0 +1,13 @@
+<h1>投稿を作る</h1>
+<hr>
+<%= form-for @post do |f| %>
+<p>名前</p>
+<%= f.text_filed :name %>
+<p>内容</p>
+<%= f.text_filed :content %>
+<p>場所</p>
+<%= f.text_filed :place %>
+<hr>
+<%= f.submit "投稿" %>
+<% end %>
+<p><a href="/posts"></a>トップに戻る</p>

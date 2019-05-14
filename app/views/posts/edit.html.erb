@@ -1,0 +1,11 @@
+<h>投稿を編集する</h>
+<hr>
+<%= form_for @post do |f| %>
+<P>内容</P>
+<%= f.text_area :content %>
+<P>場所</P>
+<%= f.text_filed :place %>
+<hr>
+<%= f.submit "変更"　%>
+<% end %>
+<%= link_to("投稿に戻る", "/posts/#{@post.id}") %>
