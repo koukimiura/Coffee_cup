@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   
   resources :posts
   resources :messages, :only => [:index, :create, :destroy]
-  
+  resources :welcome, :only => [:index]
+  root "welcome#index"
   
   
   

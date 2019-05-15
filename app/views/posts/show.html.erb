@@ -1,4 +1,7 @@
 <h1>投稿</h1>
 <p><%= @post.name %></p>
 <p><%= @post.content %></p>
-<p><a href="posts"></a>トップに戻る</p>
+<p><a href="/posts">トップに戻る</a></p>
+<a class="btn btn-info"><%= link_to("/トップ戻る", "/posts") %></a>
+<a class="btn btn-success"><%= link_to("投稿を編集する","/posts/#{post.id}/edit") %></a>
+<a class="btn btn-danger"><%= link_to("投稿を削除する","/posts/#{post.id}/destroy") %></a>

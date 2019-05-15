@@ -1,13 +1,15 @@
 <h1>投稿を作る</h1>
 <hr>
-<%= form-for @post do |f| %>
+<%= form_for @post do |f| %>
 <p>名前</p>
-<%= f.text_filed :name %>
+<%= f.text_filed :name, :class => "form-control my-form"  %>
+<br>
 <p>内容</p>
-<%= f.text_filed :content %>
+<%= f.text_area :content :class => "form-control my-form" %>
+<br>
 <p>場所</p>
-<%= f.text_filed :place %>
+<%= f.text_filed :place :class => "form-control my-form" %>
 <hr>
-<%= f.submit "投稿" %>
+<%= f.submit "投稿", :class => "btn btn-primary" %>
 <% end %>
-<p><a href="/posts"></a>トップに戻る</p>
+<a class="btn btn-info"><%= link_to("/トップ戻る", "/posts") %></a>
